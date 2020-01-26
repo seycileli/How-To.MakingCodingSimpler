@@ -1,5 +1,8 @@
 The example in this Crud folder will teach you how to use Springboot's CrudRepository API.
 
+It is a very simple, generic, straight to the point template/ example. 
+If you'd like to learn more, I will provide a link below.
+
 You can find CrudRepository methods in the link below:
 
 https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
