@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class MywebappApplication {
 
     static Subscriber subscriber;
+
     public static void main(String[] args) {
         SpringApplication.run(MywebappApplication.class, args);
     }
@@ -24,40 +25,40 @@ public class MywebappApplication {
         };
     }
 
-    @Bean
-    CommandLineRunner runner(SubscriberRepository repository) {
-        //deleting subscriber
-
-        return args -> {
-            repository.delete(new Subscriber("Sey", "Cileli", "sey@gmail.com"));
-        };
-    }
-
-    @Bean
-    CommandLineRunner runner(SubscriberRepository repository) {
-        //deleting user from database by ID
-
-        return args -> {
-            repository.deleteById(subscriber.getId());
-        };
-    }
-
-    @Bean
-    CommandLineRunner runner(SubscriberRepository repository) {
-        //finding all users from database
-
-        return args -> {
-            repository.findAll();
-        };
-    }
-
-    @Bean
-    CommandLineRunner runner(SubscriberRepository repository) {
-        //finding user by ID from database
-
-        return args -> {
-            repository.findById(subscriber.getId());
-        };
-    }
+//    @Bean
+//    CommandLineRunner runner(SubscriberRepository repository) {
+//        //deleting subscriber
+//
+//        return args -> {
+//            repository.delete(new Subscriber("Sey", "Cileli", "sey@gmail.com"));
+//        };
+//    }
+//
+//    @Bean
+//    CommandLineRunner runner(SubscriberRepository repository) {
+//        //deleting user from database by ID
+//
+//        return args -> {
+//            repository.deleteById(subscriber.getId());
+//        };
+//    }
+//
+//    @Bean
+//    CommandLineRunner runner(SubscriberRepository repository) {
+//        //finding all users from database
+//
+//        return args -> {
+//            repository.findAll();
+//        };
+//    }
+//
+//    @Bean
+//    CommandLineRunner runner(SubscriberRepository repository) {
+//        //finding user by ID from database
+//
+//        return args -> {
+//            repository.findById(subscriber.getId());
+//        };
+//    }
 
 }
