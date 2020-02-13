@@ -58,6 +58,7 @@ public class User implements UserI {
         return result; //1 = saved/ persisted, 0 unsuccessful
     }
 
+    @Override
     public int update(User user) {
 
         /**
