@@ -3,9 +3,8 @@
 public class User implements UserI {
     static EntityManager em = DaoUtility.getEntityManager();
 
-
     @Override
-    public UserProfile getUserProfile(User userid) {
+    public User getUser(User user) {
         /**
          * This is the User's profile
          * We will retrieve the User info via their user id
@@ -13,12 +12,12 @@ public class User implements UserI {
 
         User user = null;
 
-        user = em.find(UserProfile.class, userid);
+        user = em.find(User.class, user);
 
         em.close();
         DaoUtility.close();
 
-        return userProfile;
+        return user;
     }
 
     @Override
