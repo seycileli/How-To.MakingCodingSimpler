@@ -1,6 +1,6 @@
-//this is an example below
+//this is an example below of a whole Crud operation basically
 
-public class User implements UserI{
+public class User implements UserI {
     static EntityManager em = DaoUtility.getEntityManager();
 
 
